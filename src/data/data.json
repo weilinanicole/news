@@ -1,0 +1,18 @@
+{
+    "list": [{
+        "img": "imgs/1.jpg",
+        "title": "德盛苑",
+        "dollar": "￥2200",
+        "add": "北京市"
+    }, {
+        "img": "imgs/2.jpg",
+        "title": "德盛苑",
+        "dollar": "￥2200",
+        "add": "北京市"
+    }, {
+        "img": "imgs/3.jpg",
+        "title": "德盛苑",
+        "dollar": "￥2200",
+        "add": "北京市"
+    }]
+}

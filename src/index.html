@@ -26,5 +26,13 @@
 
 </body>
 <script src='js/jquery-2.1.1.min.js'></script>
+<script>
+    $.ajsx({
+        url: '/login',
+        success: function(data) {
+            console.log(data)
+        }
+    })
+</script>
 
 </html>

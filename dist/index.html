@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><link rel="stylesheet" href="css/style.css"></head><body><div class="wrap"><header><li>111</li><li>111</li><li>111</li></header><section></section><footer><li>111</li><li>222</li><li>333</li></footer></div></body><script src="js/jquery-2.1.1.min.js"></script><script>$.ajax({
+        url: '/login',
+        success: function(data) {
+            var datas = JSON.parse(data);
+            var str = '';
+            $.each(datas.list, function(i, v) {
+                str += `<ul>
+                <img src=${v.img} alt="">
+                <h2>${v.title}</h2>
+                <h4>${v.dollar}</h4>
+                <h3>${v.add}</h3>
+            </ul>`
+            });
+            $('section').append(str)
+        }
+    })</script></html>

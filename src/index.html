@@ -16,7 +16,15 @@
             <li>111</li>
             <li>111</li>
         </header>
-        <section></section>
+        <section>
+            <!-- <ul>
+                <img src="imgs/1.jpg" alt="">
+                <h2>德盛苑</h2>
+                <h4>$2200</h4>
+                <h3>fjils</h3>
+                <h5>fjslk</h5>
+            </ul> -->
+        </section>
         <footer>
             <li>111</li>
             <li>222</li>
@@ -27,10 +35,20 @@
 </body>
 <script src='js/jquery-2.1.1.min.js'></script>
 <script>
-    $.ajsx({
+    $.ajax({
         url: '/login',
         success: function(data) {
-            console.log(data)
+            var datas = JSON.parse(data);
+            var str = '';
+            $.each(datas.list, function(i, v) {
+                str += `<ul>
+                <img src=${v.img} alt="">
+                <h2>${v.title}</h2>
+                <h4>${v.dollar}</h4>
+                <h3>${v.add}</h3>
+            </ul>`
+            });
+            $('section').append(str)
         }
     })
 </script>
